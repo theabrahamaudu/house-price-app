@@ -11,19 +11,19 @@ def run():
     st.title("")
     st.text("Please enter your housing description")
 
-    state = st.selectbox("State", df.state.unique())
+    state = st.selectbox("State", sorted(df.state.unique()))
 
-    town = st.selectbox("Town", df.town.unique())
+    town = st.selectbox("Town", sorted(df.town.unique()))
 
-    house_type = st.selectbox("House Type", df.house_type.unique())
+    house_type = st.selectbox("House Type", sorted(df.house_type.unique()))
 
-    bedrooms = st.selectbox("Number of Bedrooms", df.bedrooms.unique())
+    bedrooms = st.selectbox("Number of Bedrooms", sorted(df.bedrooms.unique()))
 
-    toilets = st.selectbox("Number of Toilets", df.toilets.unique())
+    toilets = st.selectbox("Number of Toilets", sorted(df.toilets.unique()))
 
-    bathrooms = st.selectbox("Number of Bathrooms", df.bathrooms.unique())
+    bathrooms = st.selectbox("Number of Bathrooms", sorted(df.bathrooms.unique()))
 
-    parking_space = st.selectbox("Number of Parking Spaces", df.parking_space.unique())
+    parking_space = st.selectbox("Number of Parking Spaces", sorted(df.parking_space.unique()))
 
     data = {
         "bedrooms": bedrooms,
@@ -40,8 +40,8 @@ def run():
 
         prediction = response.text
 
-        st.success(f"A {house_type} with your specifications in {town},{state}\n"
-                   f"will cost about ₦{prediction}")
+        st.success(f"A {house_type} with your specifications in {town}, {state}\n"
+                   f"will cost about ₦{float(prediction):,}")
 
 
 if __name__=="__main__":
