@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import requests
-df = pd.read_csv("preprocessed_data.csv")
+df = pd.read_csv("../app/preprocessed_data.csv")
 
 
 def run():
