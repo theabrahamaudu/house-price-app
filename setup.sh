@@ -1,6 +1,6 @@
-cd app
-python -m main
-cd ..
+run cd app
+run python -m main
+run cd ..
 mkdir -p ~frontend/.streamlit/
 echo "\
 [server]\n\
