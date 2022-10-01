@@ -36,7 +36,7 @@ def run():
         }
 
     if st.button("Get Price"):
-        response = requests.post("http://127.0.0.1:8000/predict", json=data)
+        response = requests.post("https://house-price-app-api.herokuapp.com/predict", json=data)
 
         prediction = response.text
 
