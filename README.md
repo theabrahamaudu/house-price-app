@@ -7,4 +7,10 @@ a Streamlit frontend.
 The app is currently deployed on heroku <a href="https://nigerian-house-price.herokuapp.com/">here</a>.
 
 
-Training Data Source: https://www.kaggle.com/datasets/abdullahiyunus/nigeria-houses-and-prices-dataset
+Training Data Source:  <a href="https://www.kaggle.com/datasets/abdullahiyunus/nigeria-houses-and-prices-dataset">here</a>.
+
+Future Changes:
+- Use decision tree model for prediction
+- Fix UI bugs
+  * Use integers in dropdown selectors
+  * Sub-location dropdown menu should be specific to the selected state
